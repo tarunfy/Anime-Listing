@@ -3,17 +3,17 @@ import ListCard from "../components/ListCard";
 const list = ({ list }) => {
   return (
     <div className="h-screen w-screen bg-black/95 p-4">
-      <h1 className="text-center text-2xl text-white font-medium">
-        Anime found{" "}
+      <h1 className="text-center text-3xl md:text-4xl lg:text-5xl text-white font-medium">
+        Total Animes{" "}
         <span className="text-red-600 font-bold">({list.length})</span>
       </h1>
-      <li className="mt-5 md:w-2/4 mx-auto space-y-4">
+      <ul className="mt-7 max-w-3xl mx-auto space-y-4 h-[90%] overflow-y-scroll">
         {list.map((item, index) => (
-          <ul key={index}>
+          <li key={index}>
             <ListCard item={item} />
-          </ul>
+          </li>
         ))}
-      </li>
+      </ul>
     </div>
   );
 };
