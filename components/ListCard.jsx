@@ -5,6 +5,7 @@ import { MdDoubleArrow } from "react-icons/md";
 
 const ListCard = ({ item }) => {
   const [desc, setDesc] = useState();
+  console.log(item);
 
   const truncate = (string, n) =>
     string?.length > n ? string.substr(0, n - 1) + "..." : string;
@@ -36,7 +37,7 @@ const ListCard = ({ item }) => {
         <div className="w-[60%] my-2">
           <div>
             <h1 className="text-lg md:text-2xl sm:text-xl font-semibold truncate">
-              {item.titles.rj}
+              {item.titles.en || item.titles.rj}
             </h1>
             <p className="max-w-xl text-sm md:text-lg sm:text-base">
               {truncate(desc, 60)}
