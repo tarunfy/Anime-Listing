@@ -5,7 +5,6 @@ import { MdDoubleArrow } from "react-icons/md";
 
 const ListCard = ({ item }) => {
   const [desc, setDesc] = useState();
-  console.log(item);
 
   const truncate = (string, n) =>
     string?.length > n ? string.substr(0, n - 1) + "..." : string;

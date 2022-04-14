@@ -36,7 +36,7 @@ export const getServerSideProps = async ({ query }) => {
   const title = query.title;
   try {
     const res = await fetch(
-      `https://api.aniapi.com/v1/anime?title=${title}&status=0&nsfw=false&with_episodes=false`
+      `https://api.aniapi.com/v1/anime?title=${title}&status=0&nsfw=true&with_episodes=false`
     );
     const data = await res.json();
 
