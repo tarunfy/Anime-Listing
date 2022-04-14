@@ -29,9 +29,12 @@ export default function Home() {
               onChange={(e) => setAnimeName(e.target.value)}
             />
             <Link href={`/list?title=${animeName}`}>
-              <a className="bg-red-600 text-white p-2 flex items-center md:p-4 sm:text-lg xl:text-xl">
-                Find <IoIosArrowForward className="text-white " />
-              </a>
+              <button
+                disabled={!animeName}
+                className="bg-red-600 disabled:bg-red-500 disabled:text-white/60 disabled:cursor-not-allowed text-white p-2 flex items-center md:p-4 sm:text-lg xl:text-xl"
+              >
+                Find <IoIosArrowForward />
+              </button>
             </Link>
           </div>
         </div>
