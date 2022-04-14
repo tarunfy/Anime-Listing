@@ -41,6 +41,7 @@ const Details = ({ data }) => {
             <>
               <h1 className="text-white text-2xl lg:text-3xl">Watch Trailer</h1>
               <iframe
+                allowFullScreen
                 src={data?.trailer_url}
                 className="w-full h-[80%]"
               ></iframe>
