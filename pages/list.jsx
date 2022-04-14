@@ -39,15 +39,21 @@ const List = ({ list }) => {
 
 export const getServerSideProps = async ({ query }) => {
   const title = query.title;
+  console.log("hidsicnsd");
   try {
     const res = await fetch(
-      `https://api.aniapi.com/v1/anime?title=${title}&status=0&nsfw=true&with_episodes=false`
+      title
+        ? `https://api.aniapi.com/v1/anime?title=${title}&status=0&nsfw=true&with_episodes=false`
+        : "https://api.aniapi.com/v1/random/anime/5/true"
     );
     const data = await res.json();
-
     return {
       props: {
-        list: data?.data?.documents ? data?.data?.documents : [],
+        list: title
+          ? data?.data?.documents
+            ? data?.data?.documents
+            : []
+          : data?.data,
       },
     };
   } catch (err) {

@@ -37,6 +37,12 @@ export default function Home() {
               </button>
             </Link>
           </div>
+          <p className="text-2xl text-white font-medium">OR</p>
+          <Link href={`/list`}>
+            <button className="bg-red-600 disabled:bg-red-500 disabled:text-white/60 disabled:cursor-not-allowed text-white p-2 flex items-center md:p-4 sm:text-lg xl:text-xl">
+              Get random animes <IoIosArrowForward />
+            </button>
+          </Link>
         </div>
       </div>
     </Layout>
