@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import translate from "translate";
 
 const details = ({ data }) => {
-  console.log(data);
   const [desc, setDesc] = useState("");
 
   useEffect(() => {
@@ -26,12 +25,12 @@ const details = ({ data }) => {
           alt="banner"
           className="w-full h-full object-cover"
         />
-        <div className="img-container !bg-black/30 p-4 w-full flex flex-col justify-end items-start">
+        <div className="img-container !bg-black/35 p-4 w-full flex flex-col justify-end items-start">
           <div className="w-full space-y-3">
-            <h1 className="text-white text-2xl font-black max-w-md">
+            <h1 className="text-white text-2xl  font-bold lg:text-3xl">
               {data?.titles.en || data?.titles.jp}
             </h1>
-            <p className="text-white text-sm">{desc}</p>
+            <p className="text-white text-xs sm:text-sm lg:text-base">{desc}</p>
           </div>
         </div>
       </div>
@@ -40,10 +39,10 @@ const details = ({ data }) => {
         <div className="h-[80%]">
           {data?.trailer_url ? (
             <>
-              <h1 className="text-white text-2xl">Watch Trailer</h1>
+              <h1 className="text-white text-2xl lg:text-3xl">Watch Trailer</h1>
               <iframe
                 src={data?.trailer_url}
-                className="w-full h-[70%]"
+                className="w-full h-[80%]"
               ></iframe>
             </>
           ) : (
