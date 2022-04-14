@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import translate from "translate";
 
-const details = ({ data }) => {
+const Details = ({ data }) => {
   const [desc, setDesc] = useState("");
 
   useEffect(() => {
@@ -84,4 +84,4 @@ export const getServerSideProps = async ({ query }) => {
   console.log(id);
 };
 
-export default details;
+export default Details;

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ListCard from "../components/ListCard";
 
-const list = ({ list }) => {
+const List = ({ list }) => {
   return (
     <div className="h-screen w-screen bg-black/95 p-4">
       {list.length <= 0 ? (
@@ -50,4 +50,4 @@ export const getServerSideProps = async ({ query }) => {
   }
 };
 
-export default list;
+export default List;
